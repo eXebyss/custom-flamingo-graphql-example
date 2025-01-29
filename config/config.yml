@@ -1,0 +1,6 @@
+graphql.cors.whitelist: ["*"]
+graphql.introspectionEnabled: true
+graphql:
+  security:
+    limitOperationAmount:
+      enable: true

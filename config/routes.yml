@@ -1,0 +1,2 @@
+- path: /
+  controller: flamingo.static.file(name='index.html',dir='frontend')

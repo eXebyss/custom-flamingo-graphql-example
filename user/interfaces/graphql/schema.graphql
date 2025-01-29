@@ -1,0 +1,16 @@
+type User {
+    name: String!
+    nicknames: [String!]
+    attributes: User_Attributes!
+}
+
+directive @userAttributeFilter(prefix: String!) on OBJECT
+
+type User_Attributes @userAttributeFilter(prefix: "secret") {
+    keys: [String!]!
+    get(key: String!): String!
+}
+
+extend type Query {
+    User(id: String!): User
+}
