@@ -61,7 +61,7 @@ func (r *MutationResolver) TodoDone(ctx context.Context, todo string, done bool)
 	return todoDone, nil
 }
 
-// TodoEdit mutation
+// TodoDelete mutation
 func (r *MutationResolver) TodoDelete(ctx context.Context, todo string) (bool, error) {
 	success, err := r.resolver.todosBackend.DeleteTodo(ctx, todo)
 	if err != nil {
